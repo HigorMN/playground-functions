@@ -20,9 +20,14 @@ function splitSentence(string) {
   let resultado = string.split(' ');
   return resultado;
 }
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeString) {
+  let ultimo = arrayDeString[arrayDeString.length - 1];
+  let primeiro = arrayDeString[0];
+  let resultado = `${ultimo}, ${primeiro}`;
+
+  return resultado;
 }
 
 // Desafio 5
