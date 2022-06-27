@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(comparando1, comparando2) {
+  let resultado;
   if (comparando1 === true && comparando2 === true) {
-    return true;
+    resultado = true;
   } else {
-    return false;
+    resultado = false;
   }
+  return resultado;
 }
 
 // Desafio 2
