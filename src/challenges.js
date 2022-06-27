@@ -83,8 +83,8 @@ function fizzBuzz(arrayDeNumeros) {
 // Desafio 9
 function encode(string) {
   let resultado = '';
-  for (index of string){
-    if (index === 'a'){
+  for (index of string) {
+    if (index === 'a') {
       resultado += '1';
     } else if (index === 'e') {
       resultado += '2';
@@ -99,14 +99,14 @@ function encode(string) {
     } else {
       resultado += index;
     }
-  } 
+  }
   return resultado;
 }
 
 function decode(string) {
   let resultado = '';
-  for (index of string){
-    if (index === '1'){
+  for (index of string) {
+    if (index === '1') {
       resultado += 'a';
     } else if (index === '2') {
       resultado += 'e';
@@ -121,14 +121,27 @@ function decode(string) {
     } else {
       resultado += index;
     }
-  } 
+  }
   return resultado;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(stringTech, nome) {
+  let ordenando = stringTech.sort();
+  let nomeTech = [];
+  let resultado;
+  for (index = 0; index < ordenando.length; index += 1) {
+    nomeTech.push({ name: nome, tech: stringTech[index] });
+  }
+  if (nomeTech.length < 4) {
+    resultado = 'Vazio!';
+  } else {
+    resultado = nomeTech;
+  }
+  return resultado;
 }
+
+console.log(techList([], 'Lucas'));
 
 module.exports = {
   calcArea,
