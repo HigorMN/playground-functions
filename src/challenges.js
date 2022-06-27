@@ -66,12 +66,12 @@ function catAndMouse(rato, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
   let resultado = [];
-  for (const index in arrayDeNumeros) {
-    if (arrayDeNumeros[index] % 3 === 0 && arrayDeNumeros[index] % 5 === 0) {
+  for (index of arrayDeNumeros) {
+    if (index % 3 === 0 && index % 5 === 0) {
       resultado.push('fizzBuzz');
-    } else if (arrayDeNumeros[index] % 3 === 0) {
+    } else if (index % 3 === 0) {
       resultado.push('fizz');
-    } else if (arrayDeNumeros[index] % 5 === 0) {
+    } else if (index % 5 === 0) {
       resultado.push('buzz');
     } else {
       resultado.push('bug!');
@@ -81,11 +81,48 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let resultado = '';
+  for (index of string){
+    if (index === 'a'){
+      resultado += '1';
+    } else if (index === 'e') {
+      resultado += '2';
+    } else if (index === 'i') {
+      resultado += '3';
+    } else if (index === 'o') {
+      resultado += '4';
+    } else if (index === 'u') {
+      resultado += '5';
+    } else if (index === ' ') {
+      resultado += ' ';
+    } else {
+      resultado += index;
+    }
+  } 
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let resultado = '';
+  for (index of string){
+    if (index === '1'){
+      resultado += 'a';
+    } else if (index === '2') {
+      resultado += 'e';
+    } else if (index === '3') {
+      resultado += 'i';
+    } else if (index === '4') {
+      resultado += 'o';
+    } else if (index === '5') {
+      resultado += 'u';
+    } else if (index === ' ') {
+      resultado += ' ';
+    } else {
+      resultado += index;
+    }
+  } 
+  return resultado;
 }
 
 // Desafio 10
