@@ -65,8 +65,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let resultado;
   if (lineA + lineB < lineC || lineC + lineB < lineA || lineA + lineC < lineA) {
     resultado = false;
-  } else if (
-    Math.abs(lineA - lineB) > lineC || Math.abs(lineC - lineB) > lineA || Math.abs(lineA - lineC) > lineA) {
+  } else if (Math.abs(lineA - lineB) > lineC || Math.abs(lineC - lineB) > lineA || Math.abs(lineA - lineC) > lineA) {
     resultado = false;
   } else {
     resultado = true;
@@ -77,7 +76,23 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {}
+function hydrate(string) {
+  let total = 0;
+  let resultado;
+  if (string.match(/\d+/g)) {
+    for (let index = 0; index < string.match(/\d+/g).length; index += 1) {
+      total += parseInt(string.match(/\d+/g)[index], 10);
+    }
+    if (total === 0) {
+      resultado = 'Vazio!';
+    } else if (total === 1) {
+      resultado = `${total} copo de água`;
+    } else {
+      resultado = `${total} copos de água`;
+    }
+  }
+  return resultado;
+}
 
 module.exports = {
   generatePhoneNumber,
