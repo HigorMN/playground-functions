@@ -130,7 +130,7 @@ function techList(stringTech, nome) {
   let ordenando = stringTech.sort();
   let nomeTech = [];
   let resultado;
-  for (index = 0; index < ordenando.length; index += 1) {
+  for (let index = 0; index < ordenando.length; index += 1) {
     nomeTech.push({ name: nome, tech: stringTech[index] });
   }
   if (nomeTech.length < 4) {
@@ -140,8 +140,6 @@ function techList(stringTech, nome) {
   }
   return resultado;
 }
-
-console.log(techList([], 'Lucas'));
 
 module.exports = {
   calcArea,
